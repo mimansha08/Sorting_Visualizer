@@ -1,5 +1,5 @@
 import Model from "./model"
-import SortingService from "./SortingService";
+import SortingService from "./sortingService";
 
 console.log("hello")
 document.body.onload=()=>{

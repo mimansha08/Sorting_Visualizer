@@ -1,5 +1,5 @@
 import Model from "./model";
-import delay from "./util.js";
+import { delay } from "./util";
 
 class SortingService{
     constructor(model=new Model()){

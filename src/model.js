@@ -10,11 +10,11 @@ class Model{
     getDataSize(){
         return this.dataArray.length;
     }
-    generateRandomArray(size=50){
+    generateRandomArray(size=10){
         const arr=[];
         for(let i=0;i<size;i++){
             const x=(Math.random()*90)+10;
-            arr.push(x);
+            arr.push(x.toFixed(0));
         }
         this.dataArray=arr;
     }
