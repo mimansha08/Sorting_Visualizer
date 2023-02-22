@@ -26,8 +26,7 @@ class Controller{
     onGenerateArray=()=>{
         this.sortingService.stop();
         this.graphUpdater.stop();
-        this.model.generateRandomArray();
-        
+        this.init();  
     }
     onStart=()=>{
         this.sortingService.start();
