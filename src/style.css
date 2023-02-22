@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(29, 19, 19, 0.425);
+    color: white;
+    font-size: 20px;
+}
+.heading{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    padding: 1rem;
+}
+.buttons{
+    background-color: rgba(237, 237, 185, 0.752);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    padding: 1rem;
+}
+.play-pause,.speed{
+    display: flex;
+    gap: 1rem;
+}
+button{
+    font-size: 0.9rem;
+    padding: 0.4rem;
+    border: 1px solid grey;
+    border-radius: 0.5rem;
+    background-color: rgba(45, 45, 92, 0.808);
+    color: white;
+}
+button:active{
+    transform: translateX(3px) translateY(3px);
+}
+button:hover{
+    cursor: pointer;
+}
+

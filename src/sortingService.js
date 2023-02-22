@@ -8,13 +8,14 @@ class SortingService{
     }
     start(){
         this.isExecuting=true;
-        this.bblSort();
+        this.service();
     }
     service(){
         this.bblSort();
     }
     stop(){
         this.isExecuting=false;
+        console.log("stp is called")
     }
     async bblSort(){
     
@@ -32,6 +33,7 @@ class SortingService{
               this.model.setItem(j,this.model.getItem(j+1)) ;
               this.model.setItem(j+1,temp);
               await delay(this.model.getDelay());
+              console.log(this.isExecuting);
               document.getElementById("test").innerHTML=this.model.getDataArray().join(", ");
               if(!this.isExecuting){
                 return;

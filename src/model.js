@@ -10,7 +10,7 @@ class Model{
     getDataSize(){
         return this.dataArray.length;
     }
-    generateRandomArray(size=10){
+    generateRandomArray(size=50){
         const arr=[];
         for(let i=0;i<size;i++){
             const x=(Math.random()*90)+10;

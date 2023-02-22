@@ -41,10 +41,10 @@ class Controller {
   /* End Event Listener functions */
 }
 # Entry point of our program
-document.body.addEventListener('load', () => {
+document.body.onload= {
   const c = new Controller
   c.init()
-})
+}
 
 
 
