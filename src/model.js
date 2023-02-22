@@ -1,6 +1,6 @@
 class Model{
     constructor(){
-        this.frequency=2;
+        this.frequency=50;
         this.dataArray=[];
     }
     
@@ -31,7 +31,7 @@ class Model{
         return (1/(this.frequency))*1000;
     }
     increaseFrequency(){
-        this.frequency=Math.min(5,this.frequency+0.5);
+        this.frequency=Math.min(10,this.frequency+0.5);
     }
     decreaseFrequency(){
         this.frequency=Math.max(0.5,this.frequency-0.5);

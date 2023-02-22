@@ -1,21 +1,24 @@
-import Model from "./model";
 import { delay } from "./util";
 
 class SortingService{
-    constructor(model=new Model()){
+    constructor(model,onSortingEnd){
         this.model=model;
         this.isExecuting=false;
+        this.onSortingEnd=onSortingEnd;
     }
     start(){
         this.isExecuting=true;
         this.service();
     }
     service(){
-        this.bblSort();
+        this.bblSort().then(()=>{
+          if(this.onSortingEnd){
+            this.onSortingEnd();
+          }
+        });
     }
     stop(){
         this.isExecuting=false;
-        console.log("stp is called")
     }
     async bblSort(){
     
@@ -33,8 +36,6 @@ class SortingService{
               this.model.setItem(j,this.model.getItem(j+1)) ;
               this.model.setItem(j+1,temp);
               await delay(this.model.getDelay());
-              console.log(this.isExecuting);
-              document.getElementById("test").innerHTML=this.model.getDataArray().join(", ");
               if(!this.isExecuting){
                 return;
               }
