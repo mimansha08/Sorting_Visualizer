@@ -14,7 +14,7 @@ class Controller{
         this.graphUpdater= new GraphUpdater(this.view,this.model);
         this.sortingService=new SortingService(this.model,this.graphUpdater.stop);
         this.model.generateRandomArray();
-        this.view.displayGraph(this.model.getDataArray());
+        this.view.displayGraph(this.model.getDataArray(),this.model.colors);
         document.getElementById("generate-array").addEventListener("click",this.onGenerateArray);
         document.getElementById("start-btn").addEventListener("click",this.onStart);
         document.getElementById("stop-btn").addEventListener("click",this.onStop.bind(this));

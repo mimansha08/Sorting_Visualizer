@@ -10,8 +10,8 @@ class GraphUpdater{
     }
     async service(){
         while(this.isExecuting){
-            this.view.displayGraph(this.model.getDataArray());
-            await delay(this.model.getDelay());
+            this.view.displayGraph(this.model.getDataArray(),this.model.colors);
+            await delay(1000/60);
         }
     }
     stop(){

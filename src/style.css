@@ -56,11 +56,11 @@ button:hover{
     flex-wrap: nowrap;
     width: 100%;
     border: 1px solid black;
-    background-color: white;
+    background-color: rgb(17, 14, 14);
     gap: 1px;
 }
 #graph .bar{
     flex: 1;
-    background-color: blue;
+    background-color: rgb(226, 226, 249);
 }
 

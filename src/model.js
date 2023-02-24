@@ -1,7 +1,8 @@
 class Model{
     constructor(){
-        this.frequency=50;
+        this.frequency=5;
         this.dataArray=[];
+        this.colors=[];
     }
     
     getDataArray(){
@@ -14,7 +15,8 @@ class Model{
         const arr=[];
         for(let i=0;i<size;i++){
             const x=(Math.random()*90)+10;
-            arr.push(x.toFixed(0));
+            const n = parseInt(x.toFixed(0))
+            arr.push(n);
         }
         this.dataArray=arr;
     }
@@ -31,10 +33,16 @@ class Model{
         return (1/(this.frequency))*1000;
     }
     increaseFrequency(){
-        this.frequency=Math.min(10,this.frequency+0.5);
+        this.frequency=Math.min(50,this.frequency*1.05);
     }
     decreaseFrequency(){
-        this.frequency=Math.max(0.5,this.frequency-0.5);
+        this.frequency=Math.max(5,this.frequency*0.95);
+    }
+    getColor(index){
+        return this.colors[index];
+    }
+    setColor(index,color){
+        this.colors[index]=color;
     }
 }
 
